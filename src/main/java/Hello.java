@@ -10,7 +10,7 @@ public class Hello extends HttpServlet {
 
    public void init() throws ServletException {
       // Do required initialization
-      message = Date(new File(getClass().getClassLoader().getResource(getClass().getCanonicalName().replace('.', '/') + ".class").toURI()).lastModified())); && "07/03/21 Hello World: src/main/java/Hello.java";
+      message = "07/03/21 Hello World: src/main/java/Hello.java";
    }
 
    public void doGet(HttpServletRequest request, HttpServletResponse response)
