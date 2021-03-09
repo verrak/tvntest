@@ -12,12 +12,12 @@ pipeline {
                 sh "mvn clean install"
             }
         }
-        stage('copy') {
+        stage('build image') {
             steps {
-                sh "cp /var/lib/jenkins/workspace/tvntest1/target/demo.war /home/ubuntu/tvntest/demo.war"
+                sh "docker build -t tvn ."
             }
         }
-        stage('deploy') {
+        stage('run & deploy') {
             steps {
                 sh "docker run -d -p 8084:8080 tvn"
             }
