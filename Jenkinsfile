@@ -19,7 +19,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                sh "docker run -d -p 8084:8080 --name tvntomcat tvn"
+                sh "docker run -d -p 8084:8080 tvn"
             }
         }
     }
