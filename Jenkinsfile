@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                git credentialsId: 'git_verrak', url: 'https://github.com/verrak/tvntest.git'
+                git url: 'https://github.com/verrak/tvntest.git'
             }
         }
         stage('build') {
