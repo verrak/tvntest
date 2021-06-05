@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    tools { 
-        maven 'AutoMaven' 
-        }
 
     stages {
         stage('clone') {
