@@ -2,6 +2,7 @@ pipeline {
     agent any
     tools { 
         maven 'AutoMaven' 
+        docker 'AutoDocker'
         }
 
     stages {
